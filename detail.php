@@ -59,6 +59,11 @@ if ($status === false) {
                 <label>Email：<input type="text" name="email" value="<?= $result['email'] ?>"></label><br>
                 <label>年齢：<input type="text" name="age" value="<?= $result['age'] ?>"></label><br>
                 <label><textarea name="content" rows="4" cols="40"><?= $result['content'] ?></textarea></label><br>
+                <?php 
+                if(!empty( $result['image'])){
+                    echo '<img src="' . $result['image']  . '" width="200px" height: auto;>';
+                }
+                ?><br>
                 <input type="hidden" name="id" value="<?= $result['id'] ?>">
                 <input type="submit" value="更新">
             </fieldset>

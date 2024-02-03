@@ -1,3 +1,6 @@
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -26,19 +29,13 @@
     </header>
 
     <!-- method, action, 各inputのnameを確認してください。  -->
-    <form method="post" action="insert.php" enctype="multipart/form-data">
+    <form method="POST" action="register_insert.php">
         <div class="jumbotron">
             <fieldset>
-                <legend>フリーアンケート</legend>
-                <label>名前：<input type="text" name="name"></label><br>
-                <label>Email：<input type="text" name="email"></label><br>
-                <label>年齢：<input type="text" name="age"></label><br>
-
-                <div>
-                    <label for="image">画像：</label>
-                    <input type="file" id="image" name="image">
-                </div>
-
+                <legend>会員登録</legend>
+                <label>名前：<input type="text" name="namename"></label><br>
+                <label>ID：<input type="text" name="idid"></label><br>
+                <label>パスワード：<input type="password" name="password"></label><br>
                 <input type="submit" value="送信">
             </fieldset>
         </div>
